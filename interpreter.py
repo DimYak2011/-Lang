@@ -8,7 +8,9 @@ def run_code(cmd):
         'абоюнда': 'while'
     }
 
-
+    for value in translations.values():
+        cmd = cmd.replace(value, "")
+            
     for key, value in translations.items():
         cmd = cmd.replace(key, value)
 
